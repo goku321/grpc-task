@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "github.com/goku321/grpc-example/task";
+
+package task;
+
+service Task {
+    // Creates a task.
+    rpc Create(TaskRequest) returns (TaskReply) {}
+    // Retrieves a task.
+    rpc Get(TaskRequest) returns (TaskReply) {}
+}
+
+message TaskRequest {
+    string name = 1;
+}
+
+message TaskReply {
+    string name = 1;
+}
