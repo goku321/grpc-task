@@ -25,3 +25,12 @@ tc.Create(taskRequest, function(err, feature) {
         console.log("task created")
     }
 })
+
+taskRequest = {name: "new important task"}
+tc.Get(taskRequest, function(err, feature) {
+    if(err) {
+        console.log("error")
+    } else {
+        console.log("retrieve task: ", feature.name)
+    }
+})
